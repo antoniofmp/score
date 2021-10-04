@@ -1,6 +1,5 @@
 import mongoose, { Schema, model } from 'mongoose';
 
-
 export interface Rushing extends mongoose.Document {
     player: string;
     team: string;

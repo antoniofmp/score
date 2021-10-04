@@ -7,7 +7,7 @@ class RushingController {
 
     /*
         action: index
-        description: Renders
+        description: Renders the index land page
     */
     public async index(req: Request, res: Response) {
         const rushing: Rushing[] = await RushingModel.find({});
@@ -29,7 +29,7 @@ class RushingController {
 
     /*
         action: saveRushing
-        description: Saves into mongodb a rushing.
+        description: Saves into mongodb a rushing entry.
     */
     public async saveRushing(req: Request, res: Response) {
         const { player, team, pos, attg, att, yds, avg, ydsg, td, lng, first, firstpercentage, twenty, forty, fum } = req.body;
@@ -80,7 +80,7 @@ class RushingController {
 
     /*
         action: rushingExportCsv
-        description: Exports filtered csv file.
+        description: Exports csv file.
     */
     public async rushingExportCsv() {
         const csv = new objectstocsv(rushingData);
@@ -110,7 +110,7 @@ class RushingController {
     }
 
     /*
-        action: sortRushingByLongestRush
+        action: sortRushingByTouchdowns
         description: Sorts rushing by total rushing touchdowns.
     */
     public async sortRushingByTouchdowns(req: Request, res: Response) {
