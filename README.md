@@ -5,4 +5,4 @@
  - Run: npm run dev
  - Connect to http://localhost:3000/ in your browser
  - Execute the rushing JSON import button
- - Navigate through filter tabs and sort tabs
+ - Navigate through filter tabs and sort tabs, as well as the rushing entry list
